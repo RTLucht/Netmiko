@@ -22,7 +22,7 @@ for devices in devices_list:
         'username': username,
         'password': password
     }
-
+#because you may get a timeout or the switch just does not want to respond
     try:
         net_connect = ConnectHandler(**SW)
     except (AuthenticationException):
@@ -42,7 +42,7 @@ for devices in devices_list:
         continue
 
     
-
+# I send out the show version and just want the hostname and version and I want to know legacy or new-style
     outputs = net_connect.send_command('show version', use_textfsm=True)
 
     #print(json.dumps(output, indent=2))
