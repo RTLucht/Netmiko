@@ -38,6 +38,11 @@ for interface in interfaces:
         output1 = net_connect.send_config_set(config_commands)
         print (output1)
 
+#Saves the config
+print('\n Saving the Switch configuration\n')
+output = net_connect.save_config()
+print(output)
+
 #print(json.dumps(interfaces, indent=2))
 
 #print(json.dumps(lldp, indent=2))
