@@ -29,7 +29,7 @@ lldp = net_connect.send_command('show lldp neighbors detail', use_textfsm=True)
 #creates a variable of the neighbors in the show lldp neighbprs
 
 
-l = len(interfaces and lldp)
+
 
 for interface in interfaces:
     for local_interface in lldp:
