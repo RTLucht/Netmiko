@@ -29,7 +29,7 @@ interfaces = net_connect.send_command('show interface switchport', use_textfsm=T
 
 #from the structured data it adds the commands based on access or trunk ports
 for interface in interfaces:
-    if interface['admin_mode'] == 'static access':
+    if interface['admin_mode'] == 'static access'and interface['voice_vlan'] == 'none':
         config_commands = 'interface ' + interface['interface'] ,'switchport voice vlan 1994'
         output = net_connect.send_config_set(config_commands)
         print (output)
