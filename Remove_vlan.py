@@ -42,7 +42,7 @@ for interface in interfaces:
         output1 = net_connect.send_config_set(config_commands)
         print (output1)
 
-#This script has hardcoded voice vlan info
+#This will remove the vlan after cleaning the interfaces
 config_commands = ('no vlan ' + vlan)
 output = net_connect.send_config_set(config_commands)
 print (output)
