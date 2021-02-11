@@ -36,7 +36,7 @@ for interface in interfaces:
         output = net_connect.send_config_set(config_commands)
         print (output)
 #the switch I have in the lab has a port channel and did not want to break it.
-#I just want to add the vlan to trunks that are port channels and not the physical interfrace        
+#I just want to remove the vlan from interfaces that are port channels and not the physical interfrace        
     elif interface['admin_mode'] == 'trunk' and not "trunk (member of bundle" in interface['mode'] and vlan in interface['trunking_vlans'][0].split(','):
         config_commands = 'interface ' + interface['interface'],'switchport trunk allowed vlan remove ' +vlan
         output1 = net_connect.send_config_set(config_commands)
