@@ -13,7 +13,7 @@ scriptname = input('What is the command to run: ')
 def time_stamp():
     t = time.strftime("%Y-%m-%d %H:%M:%S")
     return t
-
+# In this script I use a nother py thon script to hold my username and password.  
 username = ME["username"]
 password = ME["password"]
 
